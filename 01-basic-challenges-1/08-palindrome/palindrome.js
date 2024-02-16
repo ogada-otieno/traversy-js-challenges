@@ -1,15 +1,28 @@
 function isPalindrome(str) {
   let removeNonAlphanumeric = str.toLowerCase().replace(/[^a-z0-9]/g, '');
-  let reversed = '';
+  //   let reversed = '';
 
-  for (let index = removeNonAlphanumeric.length - 1; index >= 0; index--) {
-    reversed += removeNonAlphanumeric[index];
-  }
+  //   for (let index = removeNonAlphanumeric.length - 1; index >= 0; index--) {
+  //     reversed += removeNonAlphanumeric[index];
+  //   }
+
+  //   if (reversed === removeNonAlphanumeric) {
+  //     return true;
+  //   } else {
+  //     return false;
+  //   }
+
+  let reversed = str
+    .toLowerCase()
+    .replace(/[^a-z0-9]/g, '')
+    .split('')
+    .reverse()
+    .join('');
 
   if (reversed === removeNonAlphanumeric) {
-    return true;
+    console.log(true);
   } else {
-    return false;
+    console.log(false);
   }
 }
 
